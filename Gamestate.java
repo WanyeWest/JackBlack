@@ -60,7 +60,7 @@ public class Gamestate
 	public boolean playerWins()
 	{
 		boolean pwin = false;
-		if(this.playerTotal > this.dealerTotal && this.playerTotal <= 21 && pStand || this.playerTotal == 21 || this.dealerTotal > 21)
+		if(this.playerTotal > this.dealerTotal && this.playerTotal <= 21 && this.pStand || this.playerTotal == 21 || this.dealerTotal > 21)
 		{
 			pwin = true;
 		}
@@ -70,7 +70,7 @@ public class Gamestate
 	public boolean dealerWins()
 	{
 		boolean dwin = false;
-		if(this.dealerTotal > this.playerTotal && this.dealerTotal <= 21 && pStand || this.playerTotal > 21)
+		if(this.dealerTotal > this.playerTotal && this.dealerTotal <= 21 && this.pStand || this.playerTotal > 21 || this.dealerTotal == 21)
 		{
 			dwin = true;
 		}

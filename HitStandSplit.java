@@ -9,7 +9,7 @@ public class HitStandSplit
     {
         //This scanner is used for the user input for hit stand or split
         Scanner inputchoice = new Scanner(System.in);
-        System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, no split");
+        System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or quit?");
         //This part is for taking the next input and will make it a string
         String hchoice = inputchoice.nextLine();
         //This is an else if tree where it decides what the user has inputed and performs the correct tasks
@@ -20,6 +20,10 @@ public class HitStandSplit
             System.out.println("You draw a " + deck.get(0));
             deck.remove(0);
         }
+        else if(hchoice.equals("quit"))
+        {
+                System.exit(0);
+        } 
         else if(hchoice.equals("stand")) 
         {
             System.out.println("What a wuss. I be takin yo' money tonight.");

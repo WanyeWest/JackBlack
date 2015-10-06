@@ -14,7 +14,20 @@ public class Main
 
 		while(game)
 		{
-			HitStandSplit.choice(gamestate);
+			if(HitStandSplit.choice(gamestate).equals("stand"))
+			{
+				//game = false;
+				if(gamestate.playerWins())
+				{
+					System.out.println("You win");
+					game = false;
+				}
+				else if(gamestate.dealerWins())
+				{
+					System.out.println("Dealer wins");
+					game = false;
+				}
+			}
 			gamestate.getPlayerTotal();
 			if(gamestate.getDealerTotal() < 17)
 			{
